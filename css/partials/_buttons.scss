@@ -1,0 +1,20 @@
+a{
+  @include typeface-2(p2, desktop);
+  text-decoration: none;
+  color: $black-normal;
+  transform: .5 ease;
+
+  &:hover{
+    opacity: .9;
+  }
+}
+
+.btn{
+  background: linear-gradient(220.94deg, $primary-light 14.43%, $primary-color 85.28%);
+  transition: .3s ease;
+  color: $black-normal;
+
+  &:hover{
+    transform: scale(1.02);
+  }
+}

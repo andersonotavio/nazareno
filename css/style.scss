@@ -1,0 +1,228 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "partials/colors";
+@import "partials/layout";
+@import "partials/typography";
+@import "partials/colors";
+@import "partials/buttons";
+@import "partials/spacing";
+
+
+
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  background-color: $white-light;
+}
+
+svg, img{
+  display: block;
+  max-width: 100%;
+}
+
+@import "partials/menu";
+@import "partials/swiper";
+@import "partials/icons";
+@import "partials/footer";
+@import "partials/animations";
+
+
+section#banner{
+  padding-top: 100px;
+  background: 
+   url('/img/nazareno.jpg');
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  
+  align-items: center;
+ 
+  height: 100vh;
+  @include responsive(s){
+    background: url('/img/nazareno-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.banner{
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  @include responsive(s){
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
+  
+}
+.banner {
+  h5{
+    padding-bottom: 16px;
+  }
+  h1{
+    color: #000;
+  }
+  .btn.online{
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    max-width: max-content;
+    margin-top: 20px;
+  }
+}
+#ministerios{
+  background-color: #a7a6a661;
+}
+#ministerios .container{
+  flex-direction: column;
+  align-items: initial;
+  h2{
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+#ministerios .ministerios{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+
+  @include responsive(s){
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+#ministerios .m-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img{
+    width: 140px;
+    transition: .3s ease;
+    &:hover{
+      transform: scale(1.03);
+    }
+    @include responsive(s){
+      width: 100px;
+    }
+  }
+  p{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 16px;
+    max-width: 120px;
+    line-height: 100%;
+  }
+}
+
+#cultos .container{
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  p{
+    font-size: 24px;
+    font-weight: 700px;
+  }
+  iframe{
+    border-radius: 20px;
+    @include responsive(s){
+      width: 400px;
+      height: 215px;
+    }
+    @include responsive(xs){
+      width: 300px;
+      height: 190px;
+    }
+  }
+  .medias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg{
+      width: 80px;
+      transition: .3s ease;
+      &:hover{
+        transform: scale(1.03);
+      }
+      path{
+        stroke: #daa520;
+      }
+      @include responsive(xs){
+        width: 60px;
+      }
+    } 
+  }
+
+}
+
+#map{
+  background-color: #a7a6a661;
+  .container{
+    flex-direction: column;
+    gap: 20px;
+    iframe{
+      border-radius: 20px;
+      @include responsive(s){
+        width: 500px;
+        height: 272px;
+      }
+      @include responsive(xs){
+        width: 300px !important;
+      }
+    }
+  }
+}
+footer .footer{
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  @include responsive(xs){
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+  
+#nossa-historia .historia-content{
+  padding-top: 120px;
+  align-items: start ;
+  h1{
+    padding: 40px 0;
+  }
+}
+
+#a-mulher .mulher-item{
+  padding-top: 120px;
+  align-items: start;
+  h1{
+    color: rgb(252, 168, 182);
+    padding: 40px 0;
+  }
+}
+
+  
